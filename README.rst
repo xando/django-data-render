@@ -81,8 +81,7 @@ Ofcourse you can overide existing templates.
 Meta attribute
 --------------
   as it is in django forms, there is ability to generate fields from the model
-  look to ``django_data_render.fields`` file docs ::
-
+  (look to ``django_data_render.fields`` file docs)::
 
   # models.py
   class MyModel(models.Model):
@@ -106,7 +105,7 @@ Fields are generated automagically, even ``verbose_name`` is taken from the mode
 Methods on renderer
 -------------------
   there is ability to write methods on renderer objects
-  (note that to invoke the method it HAVE TO BE defined *first* on the path) ::
+  (note that to invoke the method it HAVE TO BE defined *first* on the path)::
 
   # render.py
   class MyRenderer(render.Renderer):
@@ -123,7 +122,7 @@ Methods on renderer
 
 Application settings
 --------------------
-  There are number of default's which you can change directly, or via main settings.py eg.::
+  There are number of default's which you can change directly, or via main settings.py eg::
 
 
   # somewere in your code:
@@ -146,9 +145,9 @@ Application settings
 TODO
 ----
 
-Add tests!
-Docs for django_data_render.render file is mising.
-Add templatetags (context proccesor will be needed)::
+1) Add tests!
+2) Docs for django_data_render.render file is mising.
+3) Add templatetags (context proccesor will be needed)::
 
   {% load data_render_tags %}
   {% render object using data_render.RendererClass %}
