@@ -2,6 +2,7 @@ django-data-render
 ==================
 
 Render dict-like data, objects or Django models in simple unified way.
+NOTE it's just development version, it's not tested enough.
 
 
 Installation
@@ -24,6 +25,9 @@ The basic idea was to make it look much like a django form::
       name = render.FieldRenderer(verbose_name='My data name')
       group = render.FieldRenderer(path='group__name')
 
+      # currently you can also use render.DateRenderer or render.DateTimeRenderer
+      # for dates which takes additional 'format' argument with date format.
+      # see also docs below and docs in fields.py and settings.py
 
 
   # in views.py:
@@ -136,3 +140,15 @@ Application settings
      'PATH_SEPARATOR' : '__',
      # ... and others options, see django_data_render.settings file
   }
+
+
+
+TODO
+----
+
+Add tests!
+Docs for django_data_render.render file is mising.
+Add templatetags (context proccesor will be needed)::
+
+  {% load data_render_tags %}
+  {% render object using data_render.RendererClass %}

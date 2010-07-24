@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
+import os
 
+from distutils.core import setup
 import django_data_render
+
 
 
 setup(
@@ -11,8 +13,9 @@ setup(
     author='Kuba Janoszek',
     author_email='kuba.janoszek@gmail.com',
     url='http://github.com/jqb/django-data-render',
-    packages=find_packages('django_data_render'),
-    package_dir={ '': 'django_data_render'},
+    packages=['django_data_render'],
+    package_dir={'django_data_render': 'django_data_render'},
+    package_data={'django_data_render': ['templates/data_render/*.html']},
     classifiers=[
         'Development Status :: 1 - Alpha',
         'Environment :: Web Environment',
