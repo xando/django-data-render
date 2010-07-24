@@ -1,0 +1,3 @@
+include MANIEFST.in
+include LICENSE
+recursive-include django_data_render .*html
